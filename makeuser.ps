@@ -1,0 +1,20 @@
+if (( $# != 2 )); then
+	echo "Illegal number of parameters"
+	exit
+fi
+
+echo $3
+echo $2
+echo $1
+
+# $1 - display name
+# $1 - login name
+
+echo "DISPLAY NAME: " $1
+echo "LOGIN NAME: " $2
+
+#mkdir /home/$2
+#groupadd $2
+useradd $2 
+chown $2 /home/$2
+ghgrp $2 /home/$2
